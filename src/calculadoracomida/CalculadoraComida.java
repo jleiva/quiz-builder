@@ -8,14 +8,16 @@ public class CalculadoraComida {
 
     public static void main(String[] args) {    		
     		InformacionComida porcionOllaDeCarne;
-    		Builder builder = new InformacionComida.Builder("Mariscada", Medida.G);
+    		Builder builder;
+    		
+    		builder = new InformacionComida.Builder("Mariscada", Medida.G);
     		porcionOllaDeCarne = builder.build();
     		
     		System.out.println(porcionOllaDeCarne.toString());
     		
     		InformacionComida porcionPizza;
-    		Builder builderA = new InformacionComida.Builder("Slide Pizza", Medida.G);
-    		porcionPizza = builderA
+    		builder = new InformacionComida.Builder("Slide Pizza", Medida.G);
+    		porcionPizza = builder
     						.porciones(1)
     						.caloriasPorPorcion(227)
     						.carbohidratosPorPorcion(33)
@@ -24,9 +26,10 @@ public class CalculadoraComida {
     		System.out.println(porcionPizza.toString());
     		
     		InformacionComida cerveza;
-    		Builder builderB = new InformacionComida.Builder("Cerveza", Medida.ML);
-    		cerveza = builderB
+    		builder = new InformacionComida.Builder("Cerveza", Medida.ML);
+    		cerveza = builder
     						.porciones(1)
+    						.caloriasPorPorcion(100)
     						.build();
     		
     		System.out.println(cerveza.toString());
