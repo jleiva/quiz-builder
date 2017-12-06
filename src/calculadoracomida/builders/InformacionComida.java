@@ -6,13 +6,13 @@ public class InformacionComida {
 	private final String nombre;
 	private final Medida unidadDeMedida;
 	private int cantidadPorcion;
-    private int porciones;
-    private int calorias;
-    private int grasa;
-    private int sodio;
-    private int carbohidratos;
+	private int porciones;
+	private int calorias;
+	private int grasa;
+	private int sodio;
+	private int carbohidratos;
     
-    private InformacionComida(Builder builder) {
+	private InformacionComida(Builder builder) {
     		this.nombre = builder.nombre;
     		this.unidadDeMedida = builder.unidadDeMedida;
     		this.porciones = builder.porciones;
@@ -74,50 +74,50 @@ public class InformacionComida {
 		private final String nombre;
 		private final Medida unidadDeMedida;
 		private int cantidadPorcion;
-	    private int porciones;
-	    private int calorias;
-	    private int grasa;
-	    private int sodio;
-	    private int carbohidratos;
+		private int porciones;
+		private int calorias;
+		private int grasa;
+		private int sodio;
+		private int carbohidratos;
 	    
-	    public Builder(String nombre, Medida unidadDeMedida) {
-	        this.nombre = nombre;
-	        this.unidadDeMedida = unidadDeMedida;
-	    }
-	    
-	    public Builder carbohidratosPorPorcion(int carbohidratos) {
+		public Builder(String nombre, Medida unidadDeMedida) {
+			this.nombre = nombre;
+			this.unidadDeMedida = unidadDeMedida;
+		}
+		
+		public Builder carbohidratosPorPorcion(int carbohidratos) {
 			this.carbohidratos = carbohidratos;
 			return this;
 		}
-	    
-	    public Builder sodioPorPorcion(int sodio) {
+		
+		public Builder sodioPorPorcion(int sodio) {
 			this.sodio = sodio;
 			return this;
 		}
 	    
 	    public Builder grasaPorPorcion(int grasa) {
-			this.grasa = grasa;
-			return this;
+	    		this.grasa = grasa;
+	    		return this;
 		}
-	    
+	    	
 	    public Builder caloriasPorPorcion(int calorias) {
-			this.calorias = calorias;
-			return this;
-		}
+	    		this.calorias = calorias;
+	    		return this;
+	    	}
 	    
 	    public Builder porciones(int porciones) {
-			this.porciones = porciones;
-			return this;
-		}
+	    		this.porciones = porciones;
+	    		return this;
+	    }
 	    
 	    public Builder cantidadPorPorcion(int cantidadPorcion) {
-			this.cantidadPorcion = cantidadPorcion;
-			return this;
-		}
+	    		this.cantidadPorcion = cantidadPorcion;
+	    		return this;
+	    	}
 	    
 	    public InformacionComida build() {
 	    		InformacionComida user = new InformacionComida(this);
-	        return user;
+	    		return user;
 	    }
 	}
 }

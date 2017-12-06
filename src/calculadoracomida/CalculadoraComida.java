@@ -17,20 +17,18 @@ public class CalculadoraComida {
     		
     		InformacionComida porcionPizza;
     		builder = new InformacionComida.Builder("Slide Pizza", Medida.G);
-    		porcionPizza = builder
-    						.porciones(1)
-    						.caloriasPorPorcion(227)
-    						.carbohidratosPorPorcion(33)
-    						.build();
+    		porcionPizza = builder.porciones(1)
+    				.caloriasPorPorcion(227)
+    				.carbohidratosPorPorcion(33)
+    				.build();
     		
     		System.out.println(porcionPizza.toString());
     		
     		InformacionComida cerveza;
     		builder = new InformacionComida.Builder("Cerveza", Medida.ML);
-    		cerveza = builder
-    						.porciones(1)
-    						.caloriasPorPorcion(100)
-    						.build();
+    		cerveza = builder.porciones(1)
+    				.caloriasPorPorcion(100)
+    				.build();
     		
     		System.out.println(cerveza.toString());
     }
